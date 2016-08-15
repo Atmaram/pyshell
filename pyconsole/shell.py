@@ -3,8 +3,24 @@ from abc import ABCMeta, abstractmethod
 import traceback
 
 class ShellInterface(object):
+    """
+    The echo parameter, if set to False, will suppress 
+    the user input from being displayed
+
+    The output parameter, if set to False, will suppress
+    the output from being displayed
+
+    The prompt parameter can be used to configure what 
+    is displayed at the prompt before each user input line
+
+    The welcome paramter, if set, will display the welcome
+    message
+
+    The bye parameter, if set, will display the message
+    after the shell exits
+    """
     __metaclass__ = ABCMeta
-    def __init__(self, echo=True, output="True", prompt="", welcome="", bye=""):
+    def __init__(self, echo=True, output=True, prompt="", welcome="", bye=""):
         self.prompt = prompt
         self.welcome = welcome
         self.bye = bye
@@ -13,7 +29,16 @@ class ShellInterface(object):
 
     @abstractmethod
     def processLine(self, inputLine):
+        """
+        This method needs to be overridden. Transform an input into output
+        """
         raise NotImplementedError
+
+    def start(self):
+        """
+        Starts the interactive shell
+        """
+        pass
 
 class Shell(ShellInterface):
     def __init__(self, *args, **kwargs):
