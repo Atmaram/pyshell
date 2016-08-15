@@ -8,7 +8,7 @@ setup(
     author = "Atmaram Shetye",
     author_email = "atmaram.shetye@gmail.com",
     url = "https://github.com/Atmaram/pyshell",
-    download_url = "https://github.com/Atmaram/pyshell/tarball/pyshell-0.2",
+    download_url = "https://github.com/Atmaram/pyshell/tarball/0.2",
     keywords = ['terminal', 'console', 'shell', 'interactive'],
     classifiers = [],
 )
