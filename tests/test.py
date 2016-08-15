@@ -1,4 +1,4 @@
-from shell import Shell
+from pyconsole.shell import Shell
 
 class TestShell(Shell):
     def processLine(self, line):

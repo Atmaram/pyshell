@@ -1,8 +1,8 @@
 from distutils.core import setup
 
 setup(
-    name = "pyshell",
-    packages = ["pyshell", "tests"],
+    name = "pyconsole",
+    packages = ["pyconsole", "tests"],
     version = "0.4",
     description = "An interactive customizeable shell",
     license = 'MIT',
