@@ -2,9 +2,10 @@ from distutils.core import setup
 
 setup(
     name = "pyshell",
-    packages = "pyshell",
+    packages = ["pyshell", "tests"],
     version = "0.3",
     description = "An interactive customizeable shell",
+    license = 'MIT',
     author = "Atmaram Shetye",
     author_email = "atmaram.shetye@gmail.com",
     url = "https://github.com/Atmaram/pyshell",
